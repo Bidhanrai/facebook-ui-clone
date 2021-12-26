@@ -252,9 +252,6 @@ class _HomeViewState extends State<HomeView> {
         Container(
           height: 100,
         ),
-        Container(
-          height: 100,
-        ),
       ]),
     );
   }
