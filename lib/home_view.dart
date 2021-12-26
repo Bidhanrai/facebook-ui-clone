@@ -40,7 +40,6 @@ class _HomeViewState extends State<HomeView> {
             _sliverAppBar(),
             SliverList(
               delegate: SliverChildListDelegate([
-                // const Divider(),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 12.0),
                   child: Row(
@@ -66,11 +65,11 @@ class _HomeViewState extends State<HomeView> {
                   height: _height * 0.05,
                   child: Row(
                     children: [
-                      _button("Live", const Icon(Icons.note)),
+                      _button("Live", const Icon(Icons.switch_video_rounded, color: Colors.pink, size: 20,)),
                       const VerticalDivider(thickness: 1,),
-                      _button("Photo", const Icon(Icons.note)),
+                      _button("Photo", const Icon(Icons.monochrome_photos, color: Colors.green, size: 20,)),
                       const VerticalDivider(thickness: 1,),
-                      _button("Room", const Icon(Icons.note)),
+                      _button("Room", const Icon(Icons.switch_video, color: Colors.deepPurpleAccent,size: 20,)),
                     ],
                   ),
                 ),
@@ -181,6 +180,7 @@ class _HomeViewState extends State<HomeView> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           iconData,
           const SizedBox(width: 2),
@@ -202,25 +202,21 @@ class _HomeViewState extends State<HomeView> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Container(
+              padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: Colors.grey.shade300,
+                color: Colors.grey.shade200,
                 shape: BoxShape.circle,
               ),
-              child: IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.search,),
-              ),
+              child: Image.asset("assets/icons/search.png", height: 20,),
             ),
             const SizedBox(width: 10),
             Container(
+              padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: Colors.grey.shade300,
+                color: Colors.grey.shade200,
                 shape: BoxShape.circle,
               ),
-              child: IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.search),
-              ),
+              child: Image.asset("assets/icons/messenger.png", height: 20,),
             ),
             const SizedBox(width: 10),
           ],
